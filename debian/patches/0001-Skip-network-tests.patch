@@ -1,0 +1,33 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Thu, 27 Jul 2023 16:30:47 +0800
+Subject: Skip network tests
+
+---
+ generate/generate_test.go | 1 +
+ validate/validate_test.go | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/generate/generate_test.go b/generate/generate_test.go
+index 1b806a6..cdd0d4e 100644
+--- a/generate/generate_test.go
++++ b/generate/generate_test.go
+@@ -19,6 +19,7 @@ import (
+ // and needs to be fixed immediately (as it will break downstreams that depend
+ // on us for a "sane default" and do compliance testing -- such as umoci).
+ func TestGenerateValid(t *testing.T) {
++	t.Skip("Need access network")
+ 	plat := "linux"
+ 	if runtime.GOOS == "windows" {
+ 		plat = "windows"
+diff --git a/validate/validate_test.go b/validate/validate_test.go
+index abc4205..efdb27e 100644
+--- a/validate/validate_test.go
++++ b/validate/validate_test.go
+@@ -37,6 +37,7 @@ func TestNewValidator(t *testing.T) {
+ }
+ 
+ func TestJSONSchema(t *testing.T) {
++	t.Skip("Need access network")
+ 	for _, tt := range []struct {
+ 		config *rspec.Spec
+ 		error  string

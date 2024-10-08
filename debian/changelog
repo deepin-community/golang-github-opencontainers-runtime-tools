@@ -1,5 +1,80 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-opencontainers-runtime-tools (0.9.0.109.ge931285-1) unstable; urgency=medium
 
-  * Initial release
+  * Team Upload
+  * Watch upstream HEAD version
+  * New upstream version 0.9.0.109.ge931285
+  * Remove unused dependencies
+    + Drop golang-github-mrunalp-fileutils-dev
+    + Drop golang-github-satori-go.uuid-dev
+    + Drop golang-github-urfave-cli-dev
+  * Add patch to skip network tests (Closes: #1041408)
+  * Update section to golang
+  * Update Standards-Version to 4.6.2 (no changes)
+  * Update debhelper-compat to 13
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Add Rules-Requires-Root
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 27 Jul 2023 16:42:20 +0800
+
+golang-github-opencontainers-runtime-tools (0.9.0+git20220423.g0105384-2) unstable; urgency=medium
+
+  * Build-depend on ca-certificates, Closes: #1011875
+
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 08 Jun 2022 16:25:54 -0400
+
+golang-github-opencontainers-runtime-tools (0.9.0+git20220423.g0105384-1) unstable; urgency=medium
+
+  * Team Upload.
+  * New upstream snapshot
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 23 Apr 2022 09:29:48 -0400
+
+golang-github-opencontainers-runtime-tools (0.9.0+dfsg-4) unstable; urgency=medium
+
+  * Team Upload.
+  * Upload to unstable
+
+ -- Reinhard Tartler <siretart@tauware.de>  Fri, 15 Apr 2022 20:06:55 -0400
+
+golang-github-opencontainers-runtime-tools (0.9.0+dfsg-3) experimental; urgency=medium
+
+  * Team Upload.
+  * Backport cd1349b7c47e9def74bee83f6cec88c5c3413e65, required for podman 4.0
+
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 21 Feb 2022 18:44:52 -0500
+
+golang-github-opencontainers-runtime-tools (0.9.0+dfsg-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Update standards version to 4.4.1, no changes needed.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 06 Feb 2021 15:30:12 +0000
+
+golang-github-opencontainers-runtime-tools (0.9.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+  * (Build-)Depends:
+    + golang-github-opencontainers-selinux-dev (>= 1.3.0~)
+    = golang-github-opencontainers-specs-dev (>= 1.0.1+git20181111~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 11 Sep 2019 15:46:29 +1000
+
+golang-github-opencontainers-runtime-tools (0.8.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.8.0+dfsg
+  * Update patches
+  * Add patch to build against hashicorp-multierror 1.0 (Closes: #918502)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Mon, 14 Jan 2019 09:39:43 +0700
+
+golang-github-opencontainers-runtime-tools (0.7.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #901837).
+    Thanks, Arnaud Rebillout.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 11 Sep 2018 19:42:56 +1000
