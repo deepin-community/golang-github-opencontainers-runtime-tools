@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_GO_GENERATE := 1
+export DH_GOLANG_EXCLUDES := cmd validation
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
